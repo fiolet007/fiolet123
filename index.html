@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+	body{
+	min-width: 32px;
+	font-family: 'Playfair Display', serif;
+	color: #626262;
+}
+img{
+	max-width: 100%;
+	height: auto;
+	
+}
+
+a{
+	color: #626262;
+}
+a:hover{
+	color: #898377;
+}
+p{
+	line-height: 1.5rem;
+}
+h2,h3{
+	margin: 1rem 0;
+	font-size:30px;
+}
+
+header .brand{
+	font-size: 30px;
+	color: #626262;
+	text-transform: uppercase;
+	margin-left: 50px;
+	text-decoration: none;
+}
+
+header .nav-item{
+	text-transform: uppercase;
+	margin-right: 60px;
+}
+
+header .nav-item a::after{
+	content: '';
+	display:block;
+	width:100%;
+	background-color: #898377;
+	height: 1px;
+	transform: scale(0);
+	transition: all .3s;
+}
+header .nav-item a:hover::after{
+	transform: scale(1);
+}
+header .nav-item a:hover {
+	color: black;
+	background-color: #e3dcdc;
+	display: block;
+	height: 100%;
+	text-align: center;
+}
+
+.slider {
+	margin-bottom: 50px;
+	margin-top:10px;
+}
+.post-category,
+.link-more{
+	font-size:14px;
+    text-transform: uppercase;
+	color: #b4ad9e;
+	font-weight: 300;
+}
+.post-title a::after{
+	content: '';
+	display:block;
+	width:100%;
+	background-color: #898377;
+	height: 1px;
+	transform: scale(0);
+	transition: all .3s;
+}
+.post-title a:hover::after{
+	transform: scale(1);
+}
+.post-title a{
+text-decoration: none;
+color: #626262;
+}
+
+.grid-posts {
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+.grid-posts .card {
+	border:0;
+	margin-bottom: 60px;
+}
+.grid-posts .card-body {
+	padding-left: 0;
+	padding-right: 0;
+}
+.grid-posts .card-img-top{
+	max-height: 340px;
+	border-radius: 0;
+}
+.signup{
+	background-color: #f0f0f0;
+	padding: 60px 0;
+}
+.signup .h3{
+	color: #333;
+}
+.signup form{
+	margin-top: 50px;
+}
+.signup .form-input {
+	position: relative;
+}
+.signup .form-control{
+	border: 0;
+	border-bottom: 1px solid #000;
+	border-radius:0;
+	background-color: transparent;
+	
+}
+.signup .form-control:focus{
+	box-shadow: none;
+}
+.form-input .btn{
+	right: 0;
+	position: absolute;
+	top: -5px;
+	font-size: 22px;
+}
+.form-input .btn:focus{
+	box-shadow: none;
+}
+footer{
+	background-color: #f0f0f0;
+	padding: 40px 0;
+	color: #000;
+}
+.footer-left a{
+	color: #000;
+	margin-right: 20px;
+}
+
+.footer-right a{
+	color: #626262;
+	margin-left: 10px;
+}
+
+.map {
+	margin-bottom:50px;
+	max-width: 100%;
+}
+
+.cardb .cardmb-3 {
+	margin-bottom: 60px;
+	margin-top: 30px;
+}
+
+.card-deck {
+	border: 0;
+}
+
+#scroll_top {
+	display: none;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 1000;
+	width: 32px;
+	height: 32px;
+	background: url(https://snipp.ru/img/scroll_top.png) 50% 50% no-repeat;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+#scroll_top:hover {	
+ 	opacity: 1;
+}
+
+.foto-post {
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.foto-post .card {
+	border:0;
+	margin-bottom: 60px;
+}
+.foto-post .card-img-top{
+	max-height: 200px;
+	max-width: 200px;
+	border-radius: 360px;
+	margin: auto;
+}
+
+
+
+.parallax { 
+    /* The image used */
+    background-image: url("C:/Users/artem/OneDrive/Рабочий стол/proect/посты/ce0e77bfb7aeb256aa2f92c8b4e444cd.jpeg");
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	margin-bottom:20px;
+}
+
+.parallax1 { 
+    /* The image used */
+    background-image: url("C:/Users/artem/OneDrive/Рабочий стол/proect/посты/photo_1771170_59b427579a901.jpg");
+
+    /* Set a specific height */
+    height: 100px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	margin-bottom:40px;
+}
+
+
+
+
+
+@media only screen and (max-width : 1200px) {
+	
+}
+@media only screen and (max-width : 1199px) {
+	.grid-posts .card-img-top{
+	max-height: 300px;
+}
+
+#scroll_top {
+	display: none;
+	position: fixed;
+	bottom: 30px;
+	right: 5px;
+	z-index: 1000;
+	width: 32px;
+	height: 32px;
+	background: url(https://snipp.ru/img/scroll_top.png) 40% 40% no-repeat;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+}
+@media only screen and (max-width : 992px) {
+	
+}
+@media only screen and (max-width : 991px) {
+	.grid-posts .card-img-top{
+	max-height: 250px;
+}
+
+}
+@media only screen and (max-width : 768px) {
+	
+}
+@media only screen and (max-width : 767px) {
+		.grid-posts .card-img-top{
+	max-height: 100%;
+}
+header .brand{
+	margin-left: 20px;
+}
+
+}
+@media only screen and (max-width : 480px) {
+	
+}
+</style>
+	<title>Vand</title>
+	
+	<script>
+	$(function(){
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 200) {
+			$('#scroll_top').show();
+		} else {
+			$('#scroll_top').hide();
+		}
+	});
+ 
+	$('#scroll_top').click(function(){
+		$('html, body').animate({scrollTop: 0}, 1000);
+		return false;
+	});
+});
+</script>
+
+  </head>
+  <body>
+  
+<a href="#" id="scroll_top" title="Наверх"></a>
+
+  <header>
+  <div id="nach"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="brand" href="#">ScienceOn</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#nach">Главная</a></li>
+		<li class="nav-item"><a class="nav-link" href="#cent">О нас</a></li>
+		<li class="nav-item"><a class="nav-link" href="#centb">Особенности</a></li>
+		<li class="nav-item"><a class="nav-link" href="#niz">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+  </header>
+
+<div class="container slider">
+<div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#slider" data-slide-to="0" class="active"></li>
+    <li data-target="#slider" data-slide-to="1"></li>
+    <li data-target="#slider" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/Granichnye-vychisleniya-Edge-computing-3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/Screenshot_2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/slide_3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+
+<div class="container">
+<div id="cent"></div>
+  <div class="row">
+     <div class="col">
+	    <div class="single-post">
+
+		   <h3 class="post-category">Наука и ты</h3>
+		   <h2 class="post-title"><a href="#">Edge analytics что это?</a></h2>
+		   <p><p><strong>Аналитика данных — ключевой компонент IoT</strong></p>
+		   <p>Интернет вещей являет собой сегодня горячий рынок, но речь идет не только о потребительских устройствах, таких как смарт-термостат Nest и другие, — для поставщиков решений, имеющих дело с корпоративными клиентами и их эксплуатационной технологией, это выходит далеко за рамки одних лишь продуктов.</p>
+
+<p>Инструменты аналитики данных являются ключевой составляющей IoT-решений для организаций, которым нужно проводить сбор и анализ данных от датчиков, размещенных на производственном оборудовании, смарт-счетчиках, грузовиках доставки товаров и т. д.</p>
+
+<p>Эти средства позволяют решениям Интернета вещей выйти за рамки всего лишь связанных между собой устройств, давая возможность пользователям осуществлять мониторинг данных для выявления неисправностей и их устранения в режиме реального времени, а также глубже понимать рабочие процессы, чтобы повысить их эффективность.</p>
+
+<p>Вот десять инструментов аналитики данных, которые помогут VAR’ам создать и внедрить самые передовые решения в сфере IoT.</p>
+		  <br>
+		  <div class="parallax1"></div>
+                 <p><strong>Azure Stream Analytics</strong></p>
+<p>Azure Stream Analytics (в составе пакета Azure IoT Suite от Microsoft) — это полностью управляемый сервис, с помощью которого заказчики могут обеспечить потоковую обработку данных «в движении» — то есть в реальном времени, — используя «язык, аналогичный SQL».
+
+Несколько месяцев назад Microsoft объявила также, что интегрировала Azure Stream Analytics с Power BI, и заказчики могут теперь выводить данные прямо из своих потоковых процессов в дашборды реального времени со встроенной аналитикой Power BI, так что у них появляется возможность визуального мониторинга данных.
+
+Отличительные особенности: Stream Analytics предоставляет ряд коннекторов загрузки данных, таких как Azure Event Hubs и Azure IoT Hubs, дающих возможность легко вводить большие объемы; при этом можно агрегировать, фильтровать и группировать потоковые данные по временным интервалам.</p>				 
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>Vitria</strong></p>
+<p>Платформа IoT-аналитики Vitria сводит воедино ключевые функции для целевых отраслевых вертикалей: производства, энергетики, коммунального хозяйства и ритейла.
+
+Платформа включает загрузку потоковых данных с использованием протоколов IoT, а также Unified Analytics Engine, позволяющий ускорить аналитическую обработку в реальном времени и объединяющий в себе потоковую, ретроспективную и прогнозную аналитику. Все эти функции сведены воедино в панели Command Center, давая набор инструментов с самообслуживанием и дашборды для конечных пользователей.
+
+Отличительные особенности: Vitria включает функцию, позволяющую задействовать ретроспективные данные, находящиеся в различных хранилищах и базах данных, объединив их в более широкую платформу для всеобъемлющей обработки и анализа изменений во времени.</p>		   
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>Dell Statistica</strong></p>
+<p>Dell подходит к IoT-аналитике со стороны периметра со своим пакетом Statistica, включающим функции балльной оценки (edge scoring) непосредственно на периметре, коллективной разработки аналитики и собственную архитектуру распределенной аналитики (NDAA). Недавно вышел новый релиз Statistica — версия 13.1 — с новыми возможностями, предназначенными для специалистов по изучению данных, что позволит организациям полнее удовлетворить свои растущие требования к IoT-аналитике, обеспечив охват разнородной среды данных, говорит Dell.
+
+Отличительной особенностью Dell Statistica является то, что функция коллективной разработки аналитики (collective intelligence) в Statistica призвана помочь организациям выйти на торговую площадку моделей. Пользователи могут монетизировать созданные ими модели или импортировать написанные другими, так что эта платформа обеспечивает обмен лучшими наработками и открывает широкий выбор в зависимости от того, что нужно пользователю.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>IBM Watson IoT</strong></p>
+<p>IBM позиционирует свой инструментарий IoT-аналитики в рамках более широкой стратегии разработки искусственного интеллекта.
+
+Сервисы аналитики Watson позволяют использовать средства когнитивного анализа на структурированных и неструктурированных данных, чтобы лучше понимать ситуацию, оценить возможности выбора и учиться по мере изменения условий. Пользователи получают доступ к обработке на естественных языках, функциям текстового анализа, анализа видео и изображений и машинного самообучения, реализованным в платформе Watson.
+
+Недавно IBM вступила в партнерство с AT&T, и разработчики могут теперь использовать ее платформу Watson IoT и сервисы Bluemix вместе с IoT-платформами AT&T, чтобы обрести более глубокое понимание данных, собранных с подключенных устройств.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>Cisco CSA</strong></p>
+<p>Опираясь на свою обширную установленную базу сетевого оборудования, Cisco предлагает заказчикам платформу Connected Streaming Analytics. Она осуществляет потоковый анализ оперативных данных из множества источников, давая заказчикам глубокое понимание больших данных в реальном времени. Платформа CSA может быть реализована в виде распределенной или многоуровневой системы, обеспечивая горизонтальное масштабирование и локальную обработку данных, а также высокопроизводительную аналитику реального времени с малой задержкой.
+
+За последние несколько лет Cisco совершила ряд важных покупок, в том числе компаний Parstream, Composite Software и Truviso, что позволило ей подкрепить свои средства аналитики, обеспечив сбор данных как можно ближе к периметру и оперативно пересылая их на внутренние ресурсы аналитической обработки.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>Oracle Edge Analytics и Stream Explorer</strong></p>
+<p>Аналитическая платформа Oracle составлена из двух компонентов: Stream Explorer, который осуществляет сбор данных в облаке или корпоративной сети, и Edge Analytics, служащая для фильтрации и агрегирования данных на встроенных устройствах. Эти два инструмента предоставляют полностью готовое решение, способное выявлять паттерны в потоке данных, особенно для вертикальных рынков.
+
+Платформа Oracle предоставляет дружественный к пользователю инструментарий для изучения потоков в реальном времени и создания потоковых приложений, позволяя бизнес-пользователям строить свои собственные решения для аналитики.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>SAP HANA: Smart Data Streaming</strong></p>
+<p>Текущее предложение облачной аналитики от SAP включает уже интегрированные, открытые средства IoT на базе ее облачной платформы HANA, обеспечивая интеллектуальную потоковую передачу данных, удаленную синхронизацию, IoT-сервисы для управления обменом сообщениями с устройств и прикладные IoT-сервисы для облачной среды. SAP предлагает также Streaming Lite — компактную версию своего процессора аналитики данных, которую заказчики могут разместить на устройствах ближе к периметру.
+
+Партнерство SAP с Dell дает корпоративным клиентам ряд вариантов периметральной аналитики, построенных на сочетании шлюзов Edge Gateway 5000 от Dell с IoT-платформой SAP. Это позволяет организациям решать задачи эксплуатационного обслуживания, касающиеся производительности машинного оборудования, предупредительного техобслуживания и бесперебойности бизнеса.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>Intel Analytics Toolkit</strong></p>
+<p>IoT-платформа от Intel представляет собой «полную эталонную модель и семейство продуктов», которые можно использовать в сочетании с другими сторонними продуктами, чтобы строить решения в области аналитики. IoT Analytics включает в себя ресурсы для сбора и анализа данных с датчиков, которые предоставляет Intel IoT Developer Kit, поясняет компания.
+
+Облачная система аналитики Intel для IoT (в бета-версии) включает ресурсы для сбора и анализа данных с сенсоров — так что заказчики, использующие эту услугу, могут сразу начать сбор и анализ данных, не делая инвестиций в значительные ресурсы хранения и вычислительные мощности.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>PTC ThingWorx Analytics</strong></p>
+<p>ThingWorx Analytics, входящая в состав более широкой IoT-платформы PTC, ориентирована на разработчиков и дает возможность обнаруживать паттерны и аномалии в реальном времени, а также возможность встраивать прогнозную аналитику в создаваемые решения. ThingWorx включает также средства разработки мобильных и веб-приложений и среду исполнения, обеспечивая быструю разработку пользовательских решений на основе ролей.
+
+PTC представила недавно функцию дополненной реальности в рамках своей платформы IoT-аналитики под названием Vuforia Studio Enterprise — теперь заказчики могут переориентироваться с передачи данных на визуальную коммуникацию в рамках IoT.</p>
+		   <br>
+		   <div class="parallax1"></div>
+                 <p><strong>Tellient IoT Analytics</strong></p>
+<p>Облачный сервис IoT-аналитики компании Tellient нацелен на системы «умного дома» и технологии носимых устройств, позволяя неограниченному количеству пользователей получать доступ к аналитической информации с любого устройства в запланированное время — как пример, руководители могут ежемесячно получать отчеты с данными по электронной почте. Инструмент ориентирован на применение прежде всего в маркетинге, сфере финансовых услуг и управление цепочкой поставок. Tellient предлагает неизменный уровень цен вне зависимости от количества пользователей дашбордов ее платформы IoT-аналитики.
+
+Отличительные особенности: Tellient гордится средствами визуализации своего инструмента IoT-аналитики, который дает заказчикам «прекрасные» конфигурируемые возможности представления трендов данных и прогнозирования в виде простых графиков, карт и линейных диаграмм, которыми легко поделиться с другими.</p>	   </p>
+		   
+		   <p><a href="#" class="link-more">Ваши комментарии</a></p>
+		</div>
+     </div>
+  </div>
+</div> 
+
+<section class="signup">
+<div id="centb"></div>
+   <div class="container">
+      <div class="row">
+	     <div class="col">
+		 <h3 class="text-center">Подпишись и следи за новостями!<h3>
+		 <form>
+            <div class="form-row">
+              <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 form-input">
+                <input type="email" class="form-control" placeholder="Введите ваш email"
+				valid email address required="">
+				<button class="btn" type="submit">&#10004;</button>
+              </div>
+            </div>
+            </form>
+		 </div>
+	  </div>
+	</div>
+</section>
+
+<div class="grid-posts">
+   <div class="container">
+      <div class="row">
+	     <div class="col-md-6">
+		 <div class="card">
+  <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/Screenshot_3.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="post-category">Наука и ты</h3>
+    <h5 class="card-title">Концепция граничной аналитики «Edge Analytics»</h5>
+    <p class="card-text"><p>Концепция граничной аналитики «Edge Analytics» основана на сборе, обработке и анализе данных на периферийных устройствах сети, рядом с датчиками, сетевым коммутаторами или другими подключенным устройствами, т. е. рядом с источником информации и исполняемыми элементами, например на производстве. Сам термин «Edge Сomputing» означает, что часть работы происходит на самом конце сети, в том месте где в системах IoT мир физических объектов связывается с Интернетом. Однако граничные вычисления Edge Computing — это гораздо больше, чем просто расчет и обработка данных. Его основная функция — плавная интеграция периферийных устройств и облачных вычислений, а также двусторонний обмен информацией.</p>
+
+<p>Решение подразумевающее граничные вычисления дают возможность анализировать ключевые данные в режиме реального времени «на месте», не отправляя их на центральный сервер. «Граница сети» («Edge») разделена, и включает в себя модули принятие решений и модули временного хранения тех данных, которые настолько незначительны, что нужны только сейчас и нет смысла их хранить и использовать их в будущем.</p>
+<p>Согласно прогнозу Института Gartnera, 90% собранных данных на первых порах будут бесполезны, потому что компании не знают, как их правильно анализировать и использовать. Но эти данные могут очень пригодится в будещем для различных отраслей, в которых получение данных и реагирование на них в режиме реального времени имеет решающее значение для правильного функционирования. Эта будет критично для промышленных предприятий, для которых каждый час простоя может быть связан с потерями от нескольких сотен до даже нескольких миллионов евро, поэтому так важно, чтобы аналитики могли использовать потенциал данных, полученных с помощью устройств IoT.</p></p>
+  </div>
+</div>
+		 </div>
+		  <div class="col-md-6">
+		 <div class="card">
+  <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/Screenshot_5.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="post-category">Наука и ты</h3>
+    <h5 class="card-title">Основные преимущества граничных вычислений «Edge computing»</h5>
+    <p class="card-text"><p>Основными преимуществами решения «Edge computing», упоминаемыми экспертами, являются конфиденциальность, уменьшение задержек и минимизация проблем со связью. Для первого преимущества конфиденциальная информация предварительно обрабатывается на месте, и только данные, соответствующие политике конфиденциальности, передаются в облако для дальнейшего анализа. Второе преимущество, заключается в ограничении задержек и является наиболее часто упоминаемым преимуществом, связанным с использованием решений граничных вычислений Edge Computing. В настоящее время из-за огромного количества данных, отправляемых в облако, обрабатываемых там и передаваемых обратно на периферийные устройства, могут возникать задержки в получении выводов из анализа, что может иметь серьезные последствия для функционирования предприятия. В третьих, в случае Edge Computing, часть вычислений выполняется на периферийных устройствах, что не только снижает риск задержек, но и дает «потенциальную» гарантию того, что работа не будет прервана в случае ограниченного или прерывистого сетевого подключения. Это особенно важно, когда решения внедряются в труднодоступных местах, где охват сетями связи весьма ограничен.</p></p>
+  </div>
+</div>
+		 </div>
+		  <div class="col-md-6">
+		 <div class="card">
+  <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/Screenshot_6.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="post-category">Наука и ты</h3>
+    <h5 class="card-title">Применение граничных вычислений «Edge computing» в промышленности</h5>
+    <p class="card-text"> <p>Реализация диагностических алгоритмов на периферийных устройствах позволяет осуществлять постоянный мониторинг и обнаружение отклонений от «нормальной» работы промышленных машин на основе автоматически запоминаемого рабочего профиля. Например, если данные от датчиков, подключенных к системе, укажут на риск потенциального отказа, благодаря их быстрой интерпретации с помощью аналитического алгоритма, эта информация будет передана тем, кто отвечает за поддержание движения на заводе. в форме сообщения о необходимости замены определенной детали</p>
+
+<p>Благодаря использованию данных, полученных от датчиков, мы можем контролировать работу машин в режиме реального времени. Пограничные «Edge» устройства постоянно анализируют временные графики выбранных параметров и предупреждают о нарушениях. Поэтому мы можем реагировать на событие до того, как произойдет сбой или остановка всей производственной линии, что дает огромную экономию для промышленных предприятий.</p>
+
+<p>Важным преимуществом граничных вычислений является масштабируемость. Передача аналитических алгоритмов интеллектуальным датчикам и сетевым устройствам снижает нагрузку сети на обрабатываемые данные. Благодаря этому, когда количество подключенных устройств, внедряемых организацией увеличивается, объем генерируемых данных растёт, вычислительное «облако» нагружается меньше, чем в случае сбора данных только в вычислительном «облаке».</p></p>
+  </div>
+</div>
+		 </div>
+		  <div class="col-md-6">
+		 <div class="card">
+  <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/Screenshot_7.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="post-category">Наука и ты</h3>
+    <h5 class="card-title">Граничные вычисления «Edge computing» не являются альтернативой ЦОД</h5>
+    <p class="card-text"><p>Хотя «Edge Computing» обладает огромным потенциалом, его не следует рассматривать как альтернативу централизованному анализу данных. Это подход, который должен дополнять или расширять аналитические возможности в конкретных ситуациях, особенно когда быстрая реакция на нарушения может быть чрезвычайно важна для функционирования и экономии бюджета компании.  Хотя это не идеальное решение, потому что, собирая часть объема данных локально, мы можем опустить некоторую информацию в самом «облаке». С другой стороны, граничные вычисления «Edge Analytics» позволяют нам справляться с потоком огромных объемов данных, соответствующим образом анализировать их и быстро делать самые полезные выводы для бизнеса.</p></p>
+  </div>
+</div>
+		 </div>
+	  </div>
+	</div>
+</div>
+
+<div class="container">
+<h1 align="center">Наши предложения</h1>
+</div>
+
+<div class="cardb">
+<div class="container">
+<div class="cardmb-3" style="max-width: 1000px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/int.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Адаптация</h5>
+        <p class="card-text"><p>Возможность при загрузке данных сразу строить одну из предложенных диаграмм;</p>
+		<p>Возможность сравнения данных за различный период;</p>
+		</p>
+        
+		</div>
+    </div>
+  </div>
+</div>
+<div class="cardmb-3" style="max-width: 1000px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/int.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Синхронизация</h5>
+        <p class="card-text">возможность обращаться в одном запросе к множеству представлений Google Analytics и возвращать из них данные в одну таблицу;</p>
+        
+		</div>
+    </div>
+  </div>
+</div>
+<div class="cardmb-3" style="max-width: 1000px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/int.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Модернизация</h5>
+        <p class="card-text">Переход с Microsoft Excel на более новую и адаптивную платформу для заполнения отчетов.</p>
+        
+		</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+         <div class="map">
+<div class="container">
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac2214da044f565cd9badf8349f9102bc5b15273d06943409962f68ba17eee084&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+         </div>
+		 
+<div class="container">
+<h1 align="center">Работу выполнили студенты 2бАСУ1</h1>
+</div>
+		 
+		 <div class="foto-post">
+		 <div class="container">
+		 <div class="card-deck">
+  <div class="card">
+    <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/арт.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 align="center">Бочкарев Артем</h5>
+    </div>
+  </div>
+  <div class="card">
+    <img src="C:/Users/artem/OneDrive/Рабочий стол/proect/посты/витя.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 align="center">Воеводин Виктор</h5>
+    </div>
+  </div>
+</div>	
+		 </div>
+		 </div>
+
+<footer>
+<div id="niz"></div>
+   <div class="container">
+      <div class="d-sm-flex justify-content-between">
+	     <div class="footer-left">
+		   <a href="#">Условия</a>
+		   <a href="#">Конфиденциальность</a>
+		 </div>
+	     <div class="footer-right">
+		    <span>Подпишись на наш:</span>
+			<a href="#"><i class="fab fa-vk"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+	     </div>
+	   </div>
+	</div>
+</footer>
+	   
+   
+    <script src="js/parallax.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
